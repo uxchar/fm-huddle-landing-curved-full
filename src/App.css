@@ -1,38 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/*colors and fonts*/
+:root {
+  --clr-pink: hsl(322, 100%, 66%);
+  --clr-light-pink: hsl(321, 100%, 78%);
+  --clr-light-red: hsl(0, 100%, 63%);
+
+  --clr-very-dark-cyan: hsl(192, 100%, 9%);
+  --clr-very-pale-blue: hsl(207, 100%, 98%);
+  --clr-white: #fff;
+
+  --font-heading-poppins: "Poppins", sans-serif;
+  --font-body-open-sans: "Open Sans", sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 375px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+h1,
+h2 {
+  text-align: center;
+  font-family: var(--font-heading-poppins);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  font-family: var(--font-body-open-sans);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  margin: 24px 24px 112px 24px;
+}
+
+.logo {
+  width: 96px;
+  height: 16px;
+}
+
+.trial_btn {
+  width: 80px;
+  height: 24px;
+  margin-left: auto;
+  color: var(--clr-pink);
+  background: var(--clr-white);
+  border: solid 1px var(--clr-light-pink);
+  border-radius: 30px;
+  font-size: 10px;
+  font-family: var(--font-body-open-sans);
+}
+
+.hero_section {
+  margin: auto 39px 120px 40px;
+}
+
+.hero_img {
+  width: 296px;
+  height: 209px;
+}
+
+.hero_txt {
+  margin-bottom: 48px;
+}
+
+.hero_btn {
+  width: 200px;
+  height: 40px;
+  margin: auto 48px 104px 48px;
+  background-color: var(--clr-pink);
+  color: var(--clr-white);
+  border-radius: 30px;
+  border: none;
+  font-size: 12px;
+  font-family: var(--font-body-open-sans);
+}
+
+.benefits_img {
+  width: 280px;
+  height: 280px;
+  margin: auto 47px 85px 48px;
+}
+
+.stat_section {
+  margin: auto 107px 181px 108px;
+}
+
+.stat_icon {
+  width: 36px;
+  height: 36px;
+}
+
+.stat_num {
+  font-size: 60px;
+}
+
+.stat_txt {
+  font-size: 15px;
+  color: var(--clr-very-dark-cyan);
 }

@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Stats from "./components/Stats";
+import Benefits from "./components/Benefits";
+import ActionCall from "./components/ActionCall";
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+
+      <Hero />
+
+      <Stats
+        stat_icon="./assets/images/icon-communities.svg"
+        stat_num="1.4k+"
+        stat_text="Communities Formed"
+      />
+      <Stats
+        stat_icon="./assets/images/icon-messages.svg"
+        stat_num="2.7m+"
+        stat_text="Messages Sent"
+      />
+
+      <Benefits
+        benefits_img="./assets/images/illustration-grow-together.svg"
+        benefits_title="Grow Together"
+        benefits_text="Generate meaningful discussions with your audience and build a strong, loyal community. 
+        Think of the insightful conversations you miss out on with a feedback form. "
+      />
+      <Benefits
+        benefits_img="./assets/images/illustration-flowing-conversation.svg"
+        benefits_title="Flowing Conversations"
+        benefits_text="You wouldn't paginate a conversation in real life, so why do it online? Our threads have 
+        just-in-time loading for a more natural flow."
+      />
+      <Benefits
+        benefits_img="./assets/images/illustration-your-users.svg"
+        benefits_title="Your Users"
+        benefits_text="It takes no time at all to integrate Huddle with your app's authentication solution. This means, 
+        once signed in to your app, your users can start chatting immediately."
+      />
+
+      <ActionCall />
+
+      <Newsletter />
+      <Footer />
     </div>
   );
 }
