@@ -1,6 +1,6 @@
 function Stats(props) {
   return (
-    <div className="stat_section">
+    <div className="stat_container">
       <img className="stat_icon" src={props.stat_icon} />
       <p className="stat_num">
         <b>{props.stat_num}</b>

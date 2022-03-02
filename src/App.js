@@ -13,17 +13,18 @@ function App() {
       <Navbar />
 
       <Hero />
-
-      <Stats
-        stat_icon="./assets/images/icon-communities.svg"
-        stat_num="1.4k+"
-        stat_text="Communities Formed"
-      />
-      <Stats
-        stat_icon="./assets/images/icon-messages.svg"
-        stat_num="2.7m+"
-        stat_text="Messages Sent"
-      />
+      <div className="stat_container">
+        <Stats
+          stat_icon="./assets/images/icon-communities.svg"
+          stat_num="1.4k+"
+          stat_text="Communities Formed"
+        />
+        <Stats
+          stat_icon="./assets/images/icon-messages.svg"
+          stat_num="2.7m+"
+          stat_text="Messages Sent"
+        />
+      </div>
 
       <div className="bg1">
         <Benefits
@@ -50,8 +51,9 @@ function App() {
 
       <ActionCall />
 
-      <Newsletter />
-      <Footer />
+      <div className="bg3">
+        <Newsletter />
+      </div>
     </div>
   );
 }
