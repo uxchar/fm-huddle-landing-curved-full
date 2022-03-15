@@ -14,6 +14,8 @@
   --font-body-open-sans: "Open Sans", sans-serif;
 }
 
+/*main container*/
+
 .App {
   display: flex;
   flex-direction: column;
@@ -38,6 +40,10 @@ p {
   font-family: var(--font-body-open-sans);
 }
 
+/*
+navigation section
+*/
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -59,7 +65,18 @@ p {
   border-radius: 1.875rem;
   font-size: 0.625rem;
   font-family: var(--font-body-open-sans);
+  box-shadow: rgba(255, 143, 216, 0.05) 1px 6px 24px 1px,
+    rgba(255, 143, 216, 0.08) 2px 2px 2px 2px;
 }
+
+.trial_btn:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/*
+hero section
+*/
 
 .hero_section {
   margin: auto 2.4375rem 88px 2.5rem;
@@ -75,10 +92,20 @@ p {
   margin: auto 3rem 6.5rem 3rem;
   background-color: var(--clr-pink);
   color: var(--clr-white);
-  border-radius: 1.875rem;
+  border-radius: 50px;
   border: none;
-  font-size: 0.75rem;
+  font-size: 12px;
+
+  font-weight: 600;
   font-family: var(--font-body-open-sans);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.hero_btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .hero_img {
@@ -86,15 +113,18 @@ p {
   height: 13.0625rem;
 }
 
+/*
+statistic section
+*/
+
 .stat_container {
   margin: auto auto 3rem auto;
 }
 
 .stat_icon {
-  margin: 0 auto;
+  margin: -60px auto;
   width: 2.25rem;
-  height: 2.25rem;
-  margin-bottom: -3.75rem;
+  height: auto;
 }
 
 .stat_num {
@@ -105,7 +135,12 @@ p {
 .stat_txt {
   font-size: 0.9375rem;
   color: var(--clr-very-dark-cyan);
+  margin-bottom: 88px;
 }
+
+/*
+benefits section
+*/
 
 .benefits_container:nth-child(1) {
   background-color: var(--clr-very-pale-blue);
@@ -142,11 +177,16 @@ p {
 }
 
 .benefits_txt {
-  margin: auto 1.8125rem 50px 1.625rem;
+  margin: auto 1.875rem 50px 1.625rem;
   padding-bottom: 100px;
 }
 
+/*
+action section
+*/
+
 .action_container {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
 }
@@ -160,9 +200,20 @@ p {
   margin: 0 auto;
   background-color: var(--clr-pink);
   color: var(--clr-white);
+  font-weight: 600;
+  font-size: 12px;
+
   border: none;
-  border-radius: 30px;
+  border-radius: 50px;
   margin-bottom: 250px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.action_btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .bg3 {
@@ -172,6 +223,10 @@ p {
   background-size: 100%;
   padding-top: 2.5em;
 }
+
+/*
+newsletter/footer section
+*/
 
 .newsletter_footer_container {
   background-color: var(--clr-very-dark-cyan);
@@ -186,53 +241,76 @@ p {
 
 .newsletter_title {
   text-align: left;
-  color: var(--clr-white);
   margin-left: 28px;
+  margin-top: 100px;
   text-transform: uppercase;
 }
 
 .newsletter_txt {
   text-align: left;
-  margin: auto 28px 32px 28px;
+  margin: 0 28px 32px 28px;
+  padding-right: 10px;
+  line-height: 1.75;
 }
 
 .newsletter_input {
   width: 320px;
   height: 48px;
-  border-radius: 10px;
+  border-radius: 6px;
   border: none;
-  margin: auto auto 16px auto;
+  margin: auto 15px 16px 28px;
 }
 
-.submit_btn {
-  margin-left: auto;
-  margin-right: 28px;
+.btn_background {
+  width: 160px;
+  height: 48px;
+  background-color: var(--clr-white);
+  border-radius: 5px;
+}
+
+.subscribe_btn {
+  margin: auto 28px;
   width: 160px;
   height: 48px;
   color: var(--clr-white);
   background-color: var(--clr-pink);
   border: none;
   border-radius: 5px;
+  font-weight: 700;
+}
+
+.subscribe_btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.footer {
+  margin-left: 28px;
 }
 
 .footer_txt {
   text-align: left;
-  margin-left: 28px;
-  margin-bottom: 40px;
+  margin: auto auto 40px auto;
+  line-height: 1.75;
 }
 
 .footer_logo {
-  margin-left: 28px;
   margin-bottom: 16px;
   width: 200px;
   height: 32px;
 }
 
 .footer_icon {
-  margin-left: 28px;
   width: 24px;
   height: 24px;
+  margin-right: 16px;
+
   display: inline-block;
+}
+
+.sm_icon:hover {
+  fill: cyan;
+  cursor: pointer;
 }
 
 .contact_container {
@@ -242,11 +320,6 @@ p {
 .phone,
 .email {
   display: inline-block;
-  margin-left: 16px;
-}
-
-.social_icons {
-  margin-left: 28px;
 }
 
 .social_icons img {
@@ -256,19 +329,30 @@ p {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 720px) {
+  /*main container*/
+
   .App {
-    width: 1440px;
+    width: 100%;
   }
 
   h1 {
     font-size: 48px;
+    margin-top: 0;
   }
+
+  /*
+navigation section
+*/
 
   .logo {
     width: 240px;
     height: 38px;
   }
+  .navbar {
+    margin: 78px 63px 225px 80px;
+  }
+
   .hero_section {
     width: 1017px;
     margin: 0 auto;
@@ -279,6 +363,10 @@ p {
     height: 40px;
     font-size: 16px;
   }
+
+  /*
+hero section
+*/
 
   .hero_txt {
     font-size: 20px;
@@ -300,29 +388,51 @@ p {
     margin-bottom: 120px;
   }
 
+  /*
+statistic section
+*/
+
   .stat_container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 133px;
+    width: 880px;
+  }
+
+  .stat_num {
+    font-size: 96px;
+  }
+
+  .stat_txt {
+    font-size: 24px;
   }
 
   .stat_icon {
-    margin: 0 auto;
-    display: block;
+    width: 56px;
+    height: auto;
   }
-  .stat {
-    width: 50%;
-  }
+
+  /*
+benefits section
+*/
 
   .benefits_container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
   }
 
   .benefits_title {
     font-size: 40px;
+    text-align: left;
+    margin-left: 1.875rem;
+  }
+
+  .benefits_txt {
+    text-align: left;
+    margin-left: 1.875rem;
   }
 
   .benefits_description {
@@ -332,7 +442,9 @@ p {
 
   .benefits_img {
     width: 560px;
-    height: 560px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 100px;
   }
 
   .benefits_container:nth-child(1) .benefits_img {
@@ -343,8 +455,34 @@ p {
     margin-bottom: 135px;
   }
 
+  .bg1 {
+    background-image: url("../public/assets/images/bg-section-top-desktop-1.svg"),
+      url("../public/assets/images/bg-section-bottom-desktop-1.svg");
+    padding-top: 10%;
+    padding-bottom: 9%;
+    width: 100%;
+  }
+
+  .bg2 {
+    background-image: url("../public/assets/images/bg-section-top-desktop-2.svg"),
+      url("../public/assets/images/bg-section-bottom-desktop-2.svg");
+    padding-top: 10%;
+    padding-bottom: 9%;
+    width: 100%;
+  }
+  .bg3 {
+    background-image: url("../public/assets/images/bg-footer-top-desktop.svg");
+    padding-top: 10.5%;
+    width: 100%;
+  }
+
+  /*
+action section
+*/
+
   .action_container {
-    margin-bottom: 178px;
+    margin-top: 135px;
+    margin-bottom: -66px;
   }
   .action_title {
     font-size: 40px;
@@ -353,34 +491,23 @@ p {
   .action_btn {
     width: 400px;
     height: 80px;
+    font-size: 20px;
+    font-weight: 700;
   }
 
-  .bg1 {
-    background-image: url("../public/assets/images/bg-section-top-desktop-1.svg"),
-      url("../public/assets/images/bg-section-bottom-desktop-1.svg");
-    padding-top: 9.5em;
-    padding-bottom: 7em;
-  }
-
-  .bg2 {
-    background-image: url("../public/assets/images/bg-section-top-desktop-2.svg"),
-      url("../public/assets/images/bg-section-bottom-desktop-2.svg");
-    padding-top: 9em;
-    padding-bottom: 7.5em;
-  }
-  .bg3 {
-    background-image: url("../public/assets/images/bg-footer-top-desktop.svg");
-
-    padding-top: 9.5em;
-  }
+  /*
+newsletter/footer section
+*/
 
   .newsletter_footer_container {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .newsletter {
     order: 1;
+    margin-right: 98px;
   }
 
   .newsletter_title {
@@ -391,11 +518,27 @@ p {
     width: 344px;
     height: 72px;
   }
+
+  .sign-up {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .subscribe_btn {
+    margin: 0;
+  }
+
   .footer_container {
-    margin-left: 131px;
+    margin-left: 98px;
+    margin-top: 100px;
   }
   .footer_txt {
     width: 340px;
     height: 72px;
+  }
+
+  .footer_icon {
+    width: 32px;
+    height: 32px;
   }
 }

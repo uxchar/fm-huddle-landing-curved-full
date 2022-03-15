@@ -1,3 +1,6 @@
+import ReactDOM from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function Footer() {
   return (
     <div className="footer_container">
@@ -14,9 +17,15 @@ function Footer() {
         <p className="email">example@huddle.com</p>
       </div>
       <div className="social_icons">
-        <img src="./assets/images/5365678_fb_facebook_facebook logo_icon.svg" />
-        <img src="./assets/images/1161953_instagram_icon.svg" />
-        <img src="./assets/images/5305172_tweet_twitter_twitter logo_icon.svg" />
+        <FontAwesomeIcon icon="fa-brands fa-facebook-square" />
+        <img
+          className="sm_icon"
+          src="./assets/images/1161953_instagram_icon.svg"
+        />
+        <img
+          className="sm_icon"
+          src="./assets/images/5305172_tweet_twitter_twitter logo_icon.svg"
+        />
       </div>
     </div>
   );
