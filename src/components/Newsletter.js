@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Footer from "./Footer";
 
 function Newsletter() {
-  // const [emailInput] = useState("");
-  // const emailTest =
-  //   /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  const emailInput = useRef();
+  const emailMessage = useRef();
+
+  const [inputVal, setInputVal] = useState("");
+  const emailTest =
+    /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   // // email validation
 
-  // const checkEmail = (e) => {
-  //   e.preventDefault();
-  //   if (this.state.emailInput === "")
-  //     console.log("Please provide an email address");
-  // };
+  const checkEmail = (e) => {
+    e.preventDefault();
+
+    if (inputVal === "") {
+      emailInput.current.classList.add("newsletter_email_err");
+      emailMessage.current.classList.remove("email_success");
+      emailMessage.current.classList.add("email_err_message");
+    } else if (!emailTest.test(inputVal)) {
+      emailInput.current.classList.add("newsletter_email_err");
+      emailMessage.current.classList.remove("email_success");
+      emailMessage.current.classList.add("email_err_message");
+    } else {
+      emailInput.current.classList.remove("newsletter_email_err");
+      emailMessage.current.classList.remove("email_err_message");
+      emailMessage.current.classList.add("email_success");
+    }
+  };
 
   return (
     <div className="newsletter_footer_container">
@@ -25,13 +40,23 @@ function Newsletter() {
           <input
             className="newsletter_input"
             type="text"
-            // onChange={(e) => this.setState({ emailInput: e.target.value })}
-            // value={this.state.emailInput}
+            ref={emailInput}
+            value={inputVal}
+            onChange={(event) => setInputVal(event.target.value)}
             placeholder="Please type in your email."
           ></input>
-          <div className="btn_background">
-            <button className="subscribe_btn">Subscribe</button>
+          <div className="btn">
+            <div className="btn_background">
+              <button className="subscribe_btn" onClick={checkEmail}>
+                Subscribe
+              </button>
+            </div>
           </div>
+          <div class="break"></div>
+          <p className="email_success" ref={emailMessage}>
+            {" "}
+            Check your email please
+          </p>
         </div>
       </div>
       <div className="footer">

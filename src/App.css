@@ -237,18 +237,18 @@ newsletter/footer section
   display: flex;
   flex-direction: column;
   margin-bottom: 104px;
+  margin-left: 28px;
 }
 
 .newsletter_title {
   text-align: left;
-  margin-left: 28px;
   margin-top: 100px;
   text-transform: uppercase;
 }
 
 .newsletter_txt {
   text-align: left;
-  margin: 0 28px 32px 28px;
+  margin: 0 28px 32px 0;
   padding-right: 10px;
   line-height: 1.75;
 }
@@ -258,7 +258,12 @@ newsletter/footer section
   height: 48px;
   border-radius: 6px;
   border: none;
-  margin: auto 15px 16px 28px;
+  margin: auto 15px 16px 0;
+}
+
+.newsletter_email_err {
+  border: 1px solid;
+  border-color: var(--clr-light-red);
 }
 
 .btn_background {
@@ -266,10 +271,12 @@ newsletter/footer section
   height: 48px;
   background-color: var(--clr-white);
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: 21px;
 }
 
 .subscribe_btn {
-  margin: auto 28px;
+  margin-left: auto;
   width: 160px;
   height: 48px;
   color: var(--clr-white);
@@ -284,13 +291,23 @@ newsletter/footer section
   cursor: pointer;
 }
 
+.email_err_message {
+  color: var(--clr-light-red);
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.email_success {
+  visibility: hidden;
+}
+
 .footer {
   margin-left: 28px;
 }
 
 .footer_txt {
   text-align: left;
-  margin: auto auto 40px auto;
+  margin: auto 40px 40px auto;
   line-height: 1.75;
 }
 
@@ -308,8 +325,22 @@ newsletter/footer section
   display: inline-block;
 }
 
+.social_icons {
+  justify-content: space-between;
+  flex-direction: row;
+  width: 150px;
+}
+
+.sm_icon {
+  width: 23px;
+  height: auto;
+  margin-right: 17px;
+  margin-bottom: 30px;
+  color: var(--clr-white);
+}
+
 .sm_icon:hover {
-  fill: cyan;
+  color: cyan;
   cursor: pointer;
 }
 
@@ -322,14 +353,14 @@ newsletter/footer section
   display: inline-block;
 }
 
-.social_icons img {
-  width: 23px;
-  height: 23px;
-  margin-right: 20px;
-  margin-bottom: 50px;
+/*line break class*/
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 900px) {
   /*main container*/
 
   .App {
@@ -519,9 +550,14 @@ newsletter/footer section
     height: 72px;
   }
 
+  .newsletter_input {
+    margin-bottom: 0;
+  }
+
   .sign-up {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .subscribe_btn {
@@ -531,14 +567,21 @@ newsletter/footer section
   .footer_container {
     margin-left: 98px;
     margin-top: 100px;
+    margin-right: 50px;
   }
   .footer_txt {
-    width: 340px;
+    width: 300px;
     height: 72px;
   }
 
   .footer_icon {
     width: 32px;
     height: 32px;
+  }
+
+  .sm_icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 100px;
   }
 }

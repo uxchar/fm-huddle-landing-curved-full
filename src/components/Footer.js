@@ -1,5 +1,7 @@
-import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
@@ -17,15 +19,15 @@ function Footer() {
         <p className="email">example@huddle.com</p>
       </div>
       <div className="social_icons">
-        <FontAwesomeIcon icon="fa-brands fa-facebook-square" />
-        <img
-          className="sm_icon"
-          src="./assets/images/1161953_instagram_icon.svg"
-        />
-        <img
-          className="sm_icon"
-          src="./assets/images/5305172_tweet_twitter_twitter logo_icon.svg"
-        />
+        <a href="https://www.facebook.com/">
+          <FontAwesomeIcon icon={faFacebookSquare} className="sm_icon" />
+        </a>
+        <a href="https://www.instagram.com/">
+          <FontAwesomeIcon icon={faInstagram} className="sm_icon" />
+        </a>
+        <a href="https://www.twitter.com/">
+          <FontAwesomeIcon icon={faTwitterSquare} className="sm_icon" />
+        </a>
       </div>
     </div>
   );
