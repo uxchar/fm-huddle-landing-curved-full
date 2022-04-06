@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <div className="navbar">
-      <img className="logo" src="./assets/images/logo.svg" />
+      <img className="logo" src="./assets/images/logo.svg" alt="compamy logo" />
       <button className="trial_btn">Try It Free</button>
     </div>
   );
