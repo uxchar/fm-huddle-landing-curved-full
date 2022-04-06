@@ -8,7 +8,11 @@ function Hero() {
         in genuine discussion.
       </p>
       <button className="hero_btn">Get Started for Free</button>
-      <img className="hero_img" src="./assets/images/screen-mockups.svg" />
+      <img
+        className="hero_img"
+        src="./assets/images/screen-mockups.svg"
+        alt="webpage illustration"
+      />
     </div>
   );
 }

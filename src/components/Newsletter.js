@@ -59,9 +59,9 @@ function Newsletter() {
           </p>
         </div>
       </div>
-      <div className="footer">
+      <footer className="footer">
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 }
