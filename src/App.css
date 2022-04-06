@@ -431,6 +431,7 @@ statistic section
 
   .stat_num {
     font-size: 96px;
+    font-weight: 700;
   }
 
   .stat_txt {
@@ -536,7 +537,6 @@ newsletter/footer section
 
   .newsletter {
     order: 1;
-    margin-right: 98px;
   }
 
   .newsletter_title {
