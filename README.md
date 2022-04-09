@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-[![Screenshot-2022-03-20-at-22-55-12-Huddle.png](https://i.postimg.cc/gcfQ3J67/Screenshot-2022-03-20-at-22-55-12-Huddle.png)](https://postimg.cc/MXm9Sz50)
+[![Screenshot-2022-04-09-at-13-38-57-Huddle.png](https://i.postimg.cc/gkwPnVg5/Screenshot-2022-04-09-at-13-38-57-Huddle.png)](https://postimg.cc/QHrzzTGk)
 
 
 
